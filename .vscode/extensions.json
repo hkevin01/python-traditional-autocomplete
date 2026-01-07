@@ -1,0 +1,54 @@
+{
+    "recommendations": [
+        // === TRADITIONAL PYTHON AUTOCOMPLETE ===
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        
+        // === CODE COMPLETION HELPERS ===
+        "visualstudioexptteam.vscodeintellicode",
+        "tabnine.tabnine-vscode",
+        
+        // === PYTHON LINTING & FORMATTING ===
+        "ms-python.pylint",
+        "ms-python.flake8",
+        "ms-python.black-formatter",
+        "ms-python.isort",
+        
+        // === SNIPPETS ===
+        "frhtylcn.pythonsnippets",
+        "tushortz.python-extended-snippets",
+        
+        // === PATH & IMPORT HELPERS ===
+        "christian-kohler.path-intellisense",
+        "ionutvmi.path-autocomplete",
+        
+        // === BRACKET HELPERS ===
+        "coenraads.bracket-pair-colorizer-2",
+        
+        // === AUTO CLOSE ===
+        "formulahendry.auto-close-tag",
+        "formulahendry.auto-rename-tag",
+        
+        // === CODE NAVIGATION ===
+        "alefragnani.bookmarks",
+        "eamodio.gitlens",
+        
+        // === DOCUMENTATION ===
+        "njpwerner.autodocstring",
+        "donjayamanne.python-environment-manager",
+        
+        // === TESTING ===
+        "littlefoxteam.vscode-python-test-adapter",
+        
+        // === UTILITIES ===
+        "streetsidesoftware.code-spell-checker",
+        "gruntfuggly.todo-tree"
+    ],
+    "unwantedRecommendations": [
+        "github.copilot",
+        "github.copilot-chat",
+        "github.copilot-labs",
+        "continue.continue",
+        "cursor.cursor"
+    ]
+}
