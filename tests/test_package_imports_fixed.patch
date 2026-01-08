@@ -1,0 +1,5 @@
+# Fixes for package import tests
+
+# Fix 1: pygls version check - doesn't have __version__
+# Fix 2: lsprotocol version check - doesn't have __version__  
+# Fix 3: mypy version check - doesn't have __version__
