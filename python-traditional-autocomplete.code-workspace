@@ -1,0 +1,46 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"github.copilot.enable": {
+			"*": false,
+			"yaml": false,
+			"plaintext": false,
+			"markdown": false,
+			"python": false,
+			"javascript": false,
+			"typescript": false
+		},
+		"python.languageServer": "Pylance",
+		"python.analysis.autoFormatStrings": true,
+		"workbench.iconTheme": "material-icon-theme",
+		"material-icon-theme.folders.theme": "specific",
+		"material-icon-theme.folders.color": "#42a5f5",
+		"material-icon-theme.files.associations": {},
+		"material-icon-theme.activeIconPack": "angular",
+		"material-icon-theme.hidesExplorerArrows": false,
+		"terminal.integrated.defaultProfile.linux": "bash (venv)",
+		"terminal.integrated.profiles.linux": {
+			"bash (venv)": {
+				"path": "bash",
+				"args": [
+					"--init-file",
+					"${workspaceFolder}/.vscode/activate_venv.sh"
+				]
+			},
+			"bash": {
+				"path": "bash"
+			}
+		},
+		"terminal.integrated.automationProfile.linux": {
+			"path": "bash",
+			"args": [
+				"--init-file",
+				"${workspaceFolder}/.vscode/activate_venv.sh"
+			]
+		}
+	}
+}
