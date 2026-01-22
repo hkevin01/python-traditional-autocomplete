@@ -1,0 +1,8 @@
+{
+  "workbench.iconTheme": "material-icon-theme",
+  "material-icon-theme.folders.theme": "specific",
+  "material-icon-theme.folders.color": "#42a5f5",
+  "material-icon-theme.files.associations": {},
+  "material-icon-theme.activeIconPack": "angular",
+  "material-icon-theme.hidesExplorerArrows": false
+}

@@ -1,166 +1,222 @@
 {
-    "workbench.colorTheme": "Material Theme Ocean",
-    "workbench.colorCustomizations": {
-        "activityBar.background": "#0f111a",
-        "sideBar.background": "#0f111a",
-        "editor.background": "#0f111a",
-        "statusBar.background": "#84ffff",
-        "titleBar.activeBackground": "#0f111a"
+  // ========================================
+  // 🚫 DISABLE ALL AI/GENERATIVE TOOLS
+  // ========================================
+  "github.copilot.enable": {
+    "*": false,
+    "yaml": false,
+    "plaintext": false,
+    "markdown": false,
+    "python": false,
+    "javascript": false,
+    "typescript": false
+  },
+  "github.copilot.advanced": {
+    "authProvider": "github"
+  },
+  "github.copilot.editor.enableAutoCompletions": false,
+  "github.copilot.chat.enabled": false,
+  "github.copilot.inlineSuggest.enable": false,
+  "editor.inlineSuggest.enabled": false, // Disables all inline AI suggestions
+  // Disable other AI tools
+  "tabnine.experimentalAutoImports": false,
+  "continue.enableTabAutocomplete": false,
+  // ========================================
+  // ✅ MAXIMUM TRADITIONAL AUTOCOMPLETE
+  // ========================================
+  // === CORE EDITOR AUTOCOMPLETE ===
+  "editor.suggest.preview": true,
+  "editor.suggest.showMethods": true,
+  "editor.suggest.showFunctions": true,
+  "editor.suggest.showConstructors": true,
+  "editor.suggest.showFields": true,
+  "editor.suggest.showVariables": true,
+  "editor.suggest.showClasses": true,
+  "editor.suggest.showStructs": true,
+  "editor.suggest.showInterfaces": true,
+  "editor.suggest.showModules": true,
+  "editor.suggest.showProperties": true,
+  "editor.suggest.showEvents": true,
+  "editor.suggest.showOperators": true,
+  "editor.suggest.showUnits": true,
+  "editor.suggest.showValues": true,
+  "editor.suggest.showConstants": true,
+  "editor.suggest.showEnums": true,
+  "editor.suggest.showEnumMembers": true,
+  "editor.suggest.showKeywords": true,
+  "editor.suggest.showWords": true,
+  "editor.suggest.showColors": true,
+  "editor.suggest.showFiles": true,
+  "editor.suggest.showReferences": true,
+  "editor.suggest.showCustomcolors": true,
+  "editor.suggest.showFolders": true,
+  "editor.suggest.showTypeParameters": true,
+  "editor.suggest.showSnippets": true,
+  "editor.suggest.showUsers": true,
+  "editor.suggest.showIssues": true,
+  // Autocomplete behavior
+  "editor.acceptSuggestionOnCommitCharacter": true,
+  "editor.acceptSuggestionOnEnter": "on",
+  "editor.quickSuggestions": {
+    "other": "on",
+    "comments": "off",
+    "strings": "on"
+  },
+  "editor.quickSuggestionsDelay": 10,
+  "editor.suggestOnTriggerCharacters": true,
+  "editor.wordBasedSuggestions": "matchingDocuments",
+  "editor.wordBasedSuggestionsMode": "matchingDocuments",
+  "editor.suggest.localityBonus": true,
+  "editor.suggest.shareSuggestSelections": true,
+  "editor.suggest.snippetsPreventQuickSuggestions": false,
+  "editor.suggest.filterGraceful": true,
+  "editor.suggest.insertMode": "insert",
+  "editor.suggest.maxVisibleSuggestions": 12,
+  "editor.tabCompletion": "on",
+  // === INTELLISENSE & PARAMETER HINTS ===
+  "editor.parameterHints.enabled": true,
+  "editor.parameterHints.cycle": true,
+  "editor.hover.enabled": true,
+  "editor.hover.delay": 300,
+  "editor.hover.sticky": true,
+  // === PYTHON LANGUAGE SERVER (PYLANCE) ===
+  "python.languageServer": "Pylance",
+  "python.analysis.typeCheckingMode": "basic",
+  "python.analysis.autoImportCompletions": true,
+  "python.analysis.autoSearchPaths": true,
+  "python.analysis.diagnosticMode": "workspace",
+  "python.analysis.indexing": true,
+  "python.analysis.packageIndexDepths": [
+    {
+      "name": "sklearn",
+      "depth": 2
     },
-    
-    // === COMPLETELY DISABLE COPILOT & ALL AI FEATURES ===
-    "github.copilot.enable": {
-        "*": false,
-        "python": false,
-        "markdown": false,
-        "plaintext": false,
-        "yaml": false,
-        "json": false,
-        "javascript": false,
-        "typescript": false,
-        "jupyter": false,
-        "notebook": false,
-        "ipynb": false
+    {
+      "name": "matplotlib",
+      "depth": 2
     },
-    "github.copilot.editor.enableAutoCompletions": false,
-    "github.copilot.chat.enabled": false,
-    "github.copilot.advanced": {},
-    "editor.inlineSuggest.enabled": false,
-    
-    // Disable all AI-powered features
-    "chat.tools.global.autoApprove": false,
-    "workbench.commandPalette.experimental.suggestCommands": false,
-    
-    // === AUTOMATIC VENV ACTIVATION ===
-    "python.terminal.activateEnvironment": true,
-    "python.terminal.activateEnvInCurrentTerminal": true,
-    "terminal.integrated.env.linux": {
-        "VIRTUAL_ENV": "${workspaceFolder}/venv",
-        "PATH": "${workspaceFolder}/venv/bin:${env:PATH}"
+    {
+      "name": "pandas",
+      "depth": 3
     },
-    "terminal.integrated.defaultProfile.linux": "bash (venv auto-activate)",
-    "terminal.integrated.profiles.linux": {
-        "bash (venv auto-activate)": {
-            "path": "bash",
-            "args": ["--init-file", "${workspaceFolder}/.vscode/activate_venv.sh"]
-        }
+    {
+      "name": "numpy",
+      "depth": 3
     },
-    
-    // === JUPYTER LSP AND AUTOCOMPLETE ===
-    "jupyter.enableExtendedPythonKernelCompletions": true,
-    "jupyter.pythonCompletionTriggerCharacters": ["."],
-    "jupyter.completionTriggerCharacters": [".", "[", "\"", "'"],
-    "jupyter.languageServer": "Pylance",
-    "jupyter.widgetScriptSources": ["jsdelivr.com", "unpkg.com"],
-    "jupyter.interactiveWindow.textEditor.executeSelection": true,
-    "jupyter.kernels.filter": [],
-    
-    // === NOTEBOOK SETTINGS ===
-    "notebook.cellToolbarLocation": {
-        "default": "right",
-        "jupyter-notebook": "left"
+    {
+      "name": "pyspark",
+      "depth": 3
+    }
+  ],
+  "python.analysis.memory.keepLibraryAst": true,
+  "python.analysis.extraPaths": [],
+  "python.analysis.useLibraryCodeForTypes": true,
+  "python.analysis.stubPath": "typings",
+  "python.analysis.autoFormatStrings": true,
+  "python.analysis.completeFunctionParens": true,
+  "python.analysis.gotoDefinitionInStringLiteral": true,
+  "python.analysis.inlayHints.functionReturnTypes": true,
+  "python.analysis.inlayHints.variableTypes": true,
+  "python.analysis.inlayHints.pytestParameters": true,
+  // === PYTHON ENVIRONMENT ===
+  "python.defaultInterpreterPath": "${workspaceFolder}/venv/bin/python",
+  "python.venvPath": "${workspaceFolder}",
+  "python.terminal.activateEnvironment": true,
+  "python.terminal.activateEnvInCurrentTerminal": true,
+  // === PYTHON AUTOCOMPLETE SETTINGS ===
+  "python.autoComplete.addBrackets": true,
+  "python.autoComplete.extraPaths": [],
+  "python.autoComplete.showAdvancedMembers": true,
+  // === JUPYTER AUTOCOMPLETE ===
+  "jupyter.enableExtendedPythonKernelCompletions": true,
+  "jupyter.widgetScriptSources": [
+    "jsdelivr.com",
+    "unpkg.com"
+  ],
+  "jupyter.intellisense.enabled": true,
+  "notebook.codeActionsOnSave": {
+    "notebook.source.organizeImports": "explicit"
+  },
+  // === PATH AUTOCOMPLETE ===
+  "path-autocomplete.extensionOnImport": true,
+  "path-autocomplete.includeExtension": true,
+  "path-intellisense.autoSlashAfterDirectory": true,
+  "path-intellisense.extensionOnImport": true,
+  "path-intellisense.showHiddenFiles": false,
+  // === BRACKET & TAG COMPLETION ===
+  "editor.autoClosingBrackets": "always",
+  "editor.autoClosingQuotes": "always",
+  "editor.autoClosingOvertype": "always",
+  "editor.autoSurround": "languageDefined",
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": "active",
+  // === LINTING (Static Analysis) ===
+  "python.linting.enabled": true,
+  "python.linting.lintOnSave": true,
+  "python.linting.pylintEnabled": true,
+  "python.linting.flake8Enabled": true,
+  "python.linting.mypyEnabled": true,
+  // === FORMATTING ===
+  "python.formatting.provider": "black",
+  "[python]": {
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit"
     },
-    "notebook.lineNumbers": "on",
-    "notebook.formatOnSave.enabled": true,
-    "notebook.codeActionsOnSave": {},
-    "notebook.diff.enablePreview": true,
-    "notebook.output.textLineLimit": 30,
-    
-    // Notebook IntelliSense
-    "notebook.experimental.remoteSave": false,
-    "[python]": {
-        "editor.defaultFormatter": "ms-python.black-formatter",
-        "editor.formatOnSave": true,
-        "editor.codeActionsOnSave": {
-            "source.organizeImports": "explicit"
-        }
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  },
+  // === TYPE HINTS & SIGNATURES ===
+  "python.analysis.enablePytestSupport": true,
+  "editor.inlayHints.enabled": "on",
+  "python.analysis.importFormat": "absolute",
+  // === INTELLICODE (Microsoft's ML-based ranking) ===
+  // Note: IntelliCode uses ML for ranking suggestions but does NOT generate code
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "editor.suggestSelection": "first",
+  // === FILES & SEARCH ===
+  "files.exclude": {
+    "**/__pycache__": true,
+    "**/*.pyc": true,
+    "**/.pytest_cache": true,
+    "**/.mypy_cache": true,
+    "**/.ruff_cache": true
+  },
+  "search.exclude": {
+    "**/venv": true,
+    "**/.venv": true,
+    "**/node_modules": true,
+    "**/__pycache__": true
+  },
+  // === WORKBENCH ===
+  "workbench.iconTheme": "material-icon-theme",
+  "material-icon-theme.folders.theme": "specific",
+  "material-icon-theme.folders.color": "#42a5f5",
+  "material-icon-theme.files.associations": {},
+  "material-icon-theme.activeIconPack": "angular",
+  "material-icon-theme.hidesExplorerArrows": false,
+  // === TERMINAL ===
+  "terminal.integrated.inheritEnv": true,
+  "terminal.integrated.defaultProfile.linux": "bash (venv)",
+  "terminal.integrated.profiles.linux": {
+    "bash (venv)": {
+      "path": "bash",
+      "args": [
+        "--init-file",
+        "${workspaceFolder}/.vscode/activate_venv.sh"
+      ]
     },
-    
-    // === ENABLE TRADITIONAL PYTHON AUTOCOMPLETE ===
-    "python.languageServer": "Pylance",
-    "python.analysis.typeCheckingMode": "basic",
-    "python.analysis.autoImportCompletions": true,
-    "python.analysis.completeFunctionParens": true,
-    "python.analysis.autoFormatStrings": true,
-    "python.analysis.autoSearchPaths": true,
-    "python.analysis.diagnosticMode": "workspace",
-    "python.analysis.indexing": true,
-    "python.analysis.useLibraryCodeForTypes": true,
-    
-    // Enhanced Python Analysis
-    "python.analysis.extraPaths": [
-        "${workspaceFolder}/venv/lib/python3.12/site-packages"
-    ],
-    "python.analysis.packageIndexDepths": [
-        {"name": "pandas", "depth": 3},
-        {"name": "numpy", "depth": 3},
-        {"name": "matplotlib", "depth": 3},
-        {"name": "pyspark", "depth": 3}
-    ],
-    
-    // Point to venv Python interpreter
-    "python.defaultInterpreterPath": "${workspaceFolder}/venv/bin/python",
-    "jupyter.kernels.trusted": ["${workspaceFolder}/venv/bin/python"],
-    
-    // === TRADITIONAL INTELLISENSE FEATURES ===
-    "editor.quickSuggestions": {
-        "other": "on",
-        "comments": "on",
-        "strings": "on"
-    },
-    "editor.suggest.showWords": true,
-    "editor.wordBasedSuggestions": "allDocuments",
-    "editor.suggestOnTriggerCharacters": true,
-    "editor.acceptSuggestionOnCommitCharacter": true,
-    "editor.acceptSuggestionOnEnter": "on",
-    "editor.tabCompletion": "on",
-    "editor.suggest.preview": true,
-    "editor.suggest.localityBonus": true,
-    "editor.suggest.shareSuggestSelections": true,
-    "editor.suggest.snippetsPreventQuickSuggestions": false,
-    "editor.parameterHints.enabled": true,
-    "editor.hover.enabled": "on",
-    "editor.codeLens": true,
-    
-    // === PYTHON SNIPPETS & COMPLETIONS ===
-    "python.analysis.inlayHints.functionReturnTypes": true,
-    "python.analysis.inlayHints.variableTypes": true,
-    "python.analysis.inlayHints.pytestParameters": true,
-    
-    // === AUTO CLOSE & FORMATTING ===
-    "editor.autoClosingBrackets": "always",
-    "editor.autoClosingQuotes": "always",
-    "editor.autoSurround": "languageDefined",
-    "editor.formatOnSave": false,
-    "editor.formatOnPaste": false,
-    "editor.formatOnType": true,
-    
-    // === BRACKET PAIR COLORIZATION ===
-    "editor.bracketPairColorization.enabled": true,
-    "editor.guides.bracketPairs": "active",
-    
-    // === PATH AUTOCOMPLETE ===
-    "path-autocomplete.pathMappings": {
-        "/": "${workspace}"
-    },
-    
-    // === PYTHON SPECIFIC SETTINGS ===
-    "python.linting.enabled": true,
-    "python.linting.pylintEnabled": true,
-    "python.linting.flake8Enabled": true,
-    "python.linting.lintOnSave": true,
-    
-    // === TRADITIONAL EXTENSION RECOMMENDATIONS ===
-    "extensions.ignoreRecommendations": false,
-    
-    // === EDITOR ENHANCEMENTS ===
-    "editor.minimap.enabled": true,
-    "editor.renderWhitespace": "selection",
-    "editor.suggestSelection": "first",
-    "editor.snippetSuggestions": "top",
-    "files.autoSave": "afterDelay",
-    "files.autoSaveDelay": 1000,
-    
-    // === STATUS BAR INDICATOR ===
-    "window.title": "${rootName} - [COPILOT DISABLED] - (venv)"
+    "bash": {
+      "path": "bash"
+    }
+  },
+  "terminal.integrated.automationProfile.linux": {
+    "path": "bash",
+    "args": [
+      "--init-file",
+      "${workspaceFolder}/.vscode/activate_venv.sh"
+    ]
+  },
+  // === FILES ===
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 1000
 }
